@@ -1,32 +1,32 @@
-import type { Component } from 'solid-js';
+import { Route, Routes } from "solid-app-router"
+import { Component } from "solid-js"
+import NavigationMenu from "./components/NavigationMenu"
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+import DoctorsList from "./views/DoctorsList"
+import HomePage from "./views/HomePage"
+import PatientsList from "./views/PatientsList"
+import VisitPage from "./views/VisitPage"
 
-const hello = 0
+// import styles from './App.module.css';
 
 const App: Component = () => {
   return (
-    <div class={styles.App}>
-      <a
-        href="#"
-        class={styles.link}>Hello</a>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div >
-  );
-};
+    <>
+      <div class="wrapper">
+        <div class="container">
+          <NavigationMenu />
 
-export default App;
+          <Routes>
+            <Route path="/" component={HomePage} />
+            <Route path="/doctors_list" component={DoctorsList} />
+            <Route path="/patients_list" component={PatientsList} />
+            <Route path="/visit" component={VisitPage} />
+          </Routes>
+
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default App
