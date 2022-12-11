@@ -1,0 +1,20 @@
+@import 'utils/vars';
+@import 'utils/reset';
+
+@import 'database/_database';
+@import 'database/_inc/header';
+
+body {
+    background: #F9F9F9;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 0 15px
+}
+
+
