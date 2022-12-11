@@ -14,12 +14,14 @@
     "@typescript-eslint/parser": "^5.45.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "2.8.0",
+    "sass": "^1.56.2",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
     "eslint-plugin-solid": "^0.9.1",
+    "solid-app-router": "^0.4.2",
     "solid-js": "^1.5.1"
   }
 }
